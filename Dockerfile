@@ -26,4 +26,4 @@ ENV HOST=0.0.0.0
 
 COPY server.py server.py
 
-ENTRYPOINT ["/app/.venv/bin/uvicorn", "server:app", "--host", "$HOST", "--port", "$PORT"]
+ENTRYPOINT ["sh", "-c", "/app/.venv/bin/uvicorn", "server:app", "--host", "$HOST", "--port", "$PORT"]
